@@ -1,0 +1,290 @@
+:root {
+    --primario: #aa8439;
+    --secundario: #226666;
+    --complementario: #403075;
+    --blanco: #ffffff;
+    --negro: #000000;
+    --rojo: #e9130b;
+
+    --fuentePrincipal: 'Albert Sans', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/*Globales*/
+body {
+    font-size: 1.8rem;
+    font-family: var(--fuentePrincipal);
+}
+
+p {
+    color: var(--blanco);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.2;
+}
+
+h3 {
+    font-size: 2.4;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: var(--secundario);
+}
+
+.sombra {
+    -webkit-box-shadow: 0.5px 0.5px 30px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0.5px 0.5px 30px 0px rgba(0,0,0,0.75);
+    box-shadow: 0.5px 0.5px 30px 0px rgba(0,0,0,0.75);
+    background-color: var(--blanco);
+    margin: 3rem auto;
+}
+
+/*Header*/
+.header {
+    background-color: var(--primario);
+    max-width: 192rem;
+}
+
+@media(min-width: 768px) {
+    .contenido-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 2rem;
+    }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo h1 {
+    color: var(--blanco);
+    font-weight: normal;
+}
+
+.logo span {
+    font-weight: bold;
+}
+
+/*Navegación*/
+.navegacion {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media(min-width: 768px) {
+    .navegacion {
+        flex-direction: row;
+        gap: 2rem;
+    }
+}
+
+.navegacion a {
+    color: var(--blanco);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+@media(min-width: 768px) {
+    .navegacion a {
+        margin-bottom: 0;
+    }
+}
+
+.navegacion a:hover {
+    color: var(--secundario);
+}
+
+/*Hero*/
+.hero {
+    background-image: url(../img/hero.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 78rem;
+    position: relative;
+    background-position: center center;
+    max-width: 192rem;
+}
+
+.contenido-hero {
+    position: absolute;
+    background-color: rgb(0 0 0 / 80%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+}
+
+.contenido-hero:hover {
+    opacity: 1;
+}
+
+.contenido-hero h2 {
+    font-size: 10rem;
+    margin: 0;
+}
+
+.contenido-hero h3 {
+    font-size: 6rem;
+    margin: 0;
+    color: var(--rojo);
+}
+
+.contenido-hero p {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-top: 0;
+}
+
+/*Sección nosotros, nuestro juego y motor gráfico*/
+.nosotros {
+    background: rgb(64,48,117);
+    background: linear-gradient(270deg, rgba(64,48,117,1) 0%, rgba(255,255,255,1) 100%);
+}
+
+.videojuego {
+    background: rgb(255,255,255);
+    background: linear-gradient(270deg, rgba(255,255,255,1) 0%, rgba(170,132,57,1) 100%);
+}
+
+.graficos {
+    background: rgb(34,102,102);
+    background: linear-gradient(270deg, rgba(34,102,102,1) 0%, rgba(255,255,255,1) 100%);
+}
+
+.contenido-nosotros,
+.contenido-videojuego,
+.contenido-graficos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+@media(min-width: 768px) {
+    .contenido-nosotros,
+    .contenido-videojuego,
+    .contenido-graficos {
+        flex-direction: row;
+        padding-bottom: 2rem;
+    }
+}
+
+.nosotros h2,
+.videojuego h2,
+.graficos h2 {
+    padding-top: 2rem;
+    margin: 0;
+    color: var(--negro);
+}
+
+.texto-nosotros,
+.texto-graficos,
+.texto-videojuego {
+    width: 70%;
+}
+
+@media(min-width: 800px) {
+    .texto-nosotros,
+    .texto-graficos,
+    .texto-videojuego {
+        width: 75%;
+}
+}
+
+@media(min-width: 992px) {
+    .texto-nosotros,
+    .texto-graficos,
+    .texto-videojuego {
+        width: 80%;
+}
+}
+
+.texto-nosotros p,
+.texto-graficos p,
+.texto-videojuego p {
+    color: var(--negro);
+    margin: 0 0 0 2rem;
+    line-height: 1.5;
+}
+
+.imagen-nosotros {
+    background-image: url(../img/RV.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 18rem;
+    width: 18rem;
+    margin: 1rem 0 1.5rem 0;
+}
+
+.imagen-videojuego {
+    background-image: url(../img/juego.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20rem;
+    width: 20rem;
+    margin: 1rem 0 1.5rem 0;
+}
+
+.imagen-graficos {
+    background-image: url(../img/unreal.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 19rem;
+    width: 20rem;
+    margin: 0 0 1.5rem 0;
+}
+
+@media(min-width: 768px) {
+    .imagen-nosotros {
+        margin: 0 0 0 1rem;
+    }
+}
+
+/*Footer*/
+.footer {
+    background-color: var(--primario);
+    text-align: center;
+    padding: 1rem 0;
+    max-width: 192rem;
+}
+
+.footer p {
+    margin: 0;
+}
