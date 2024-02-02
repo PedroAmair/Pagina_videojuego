@@ -1,5 +1,5 @@
 
-<h1>Website about the publication of a video game/Sitio web sobre la publicación de un videojuego</h1>
+<h2>Website about the publication of a video game/Sitio web sobre la publicación de un videojuego</h2>
 
 <h2>English</h2>
 
