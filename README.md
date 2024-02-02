@@ -7,7 +7,7 @@
 
 <a href="https://pagina-videojuego.netlify.app/">Website<a/>
 
-<h3>Spanish</h3>
+<h3>Español</h3>
 
 <p>Proyecto web sencillo referente a la salida de un videojuego. Se programó con HTML5 y CSS3 puro sin usar frameworks o librerías.</p>
 
